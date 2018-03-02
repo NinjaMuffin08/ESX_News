@@ -14,7 +14,7 @@ Cons:
 Likes and updates are updated only upon restart due to performance reasons 
 
 Todo:  
-1. Add loading icon (loading long articles may take time)
+1. Add loading icon (loading long articles may take time after last update)
 2. Animate menu transitions
 
 Requirements:
