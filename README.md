@@ -1,8 +1,9 @@
 # ESX_News
 # THE REAL FIVEM RP JOURNALIST JOB
+
 Interactive News for Fivem ESX with "facebook like" system
 YOU NEED ESX_PROPAGANDA FOR THIS
-
+![alt text](https://i.imgur.com/cYLV7sy.jpg)
 
 Features:
 1. Nice ui
