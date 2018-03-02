@@ -8,7 +8,7 @@ Features:
 1. Simplistic, nice UI
 2. Good performance (serverwise, which is the only thing that matters)
 3. Reporter gets paid according to likes (default 200)
-4. Players get their share of the social interaction :)
+4. Players get their share of the social interaction in terms of money :)
 
 Cons:
 Likes and updates are updated only upon restart due to performance reasons 
