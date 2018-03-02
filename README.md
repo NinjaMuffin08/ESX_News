@@ -1,5 +1,5 @@
 # ESX_News
-# THE REAL FIVEM RP JOURNALIST JOB
+# THE REAL FIVEM RP NEWS BRUH
 
 Interactive News for Fivem ESX with "facebook like" system
 ![alt text](https://i.imgur.com/cYLV7sy.jpg)  
@@ -7,7 +7,6 @@ YOU NEED ESX_PROPAGANDA FOR THIS
 Features:
 1. Nice ui
 2. Good performance 
-3
 3. Reporter gets paid according to likes (default 200)
 4. Players get their share of the social interaction :)
 
