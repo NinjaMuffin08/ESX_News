@@ -1,5 +1,5 @@
 # ESX_News
-# THE REAL FIVEM RP NEWS BRUH
+# FIVEM RP NEWS BRUH
 
 Interactive News for Fivem ESX with "facebook like" system
 ![alt text](https://i.imgur.com/cYLV7sy.jpg)  
