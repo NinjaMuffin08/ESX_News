@@ -6,9 +6,8 @@ Interactive News for Fivem ESX with "facebook like" system
 YOU NEED ESX_PROPAGANDA FOR THIS  
 Features:
 1. Simplistic, nice UI
-2. Good performance (serverwise, which is the only thing that matters)
-3. Reporter gets paid according to likes (default 200)
-4. Players get their share of the social interaction in terms of money :)
+2. Reporter gets paid according to likes (default 200)
+3. Players get their share of the social interaction in terms of money :)
 
 Cons:
 Likes and updates are updated only upon restart due to performance reasons 
@@ -28,8 +27,8 @@ Installation:
 3. Add to start
 4. Use the export function to open. I have a button in my phone which has a news logo. You can use AIOmenu etc.
 5. En fucking joy
-6. Credit me on your server patchnotes
+6. Credit on your server patchnotes
 
-DO NOT EDIT OR DISTRIBUTE WITHOUT PERMISSION.
+DO NOT DISTRIBUTE WITHOUT PERMISSION.
 
 DISCORD.ME/NAPAPIIRI
