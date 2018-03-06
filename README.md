@@ -29,7 +29,6 @@ Installation:
 3. Add to start
 4. Use the export function to open. I have a button in my phone which has a news logo. You can use AIOmenu etc.
 5. En fucking joy
-6. Credit on your server patchnotes
 
 DO NOT DISTRIBUTE WITHOUT PERMISSION.
 
