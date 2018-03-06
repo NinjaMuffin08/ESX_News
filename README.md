@@ -16,6 +16,7 @@ Will add the necessary server event when I have time.
 Todo:  
 1. Add loading icon (loading long articles may take time after last update)
 2. Animate menu transitions
+3. Add the missing "entertainment" section
 
 Requirements:
 1. ESSENTIALMODE & ES EXTENDED
