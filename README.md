@@ -10,7 +10,8 @@ Features:
 3. Players get their share of the social interaction in terms of money :)
 
 Cons:
-Likes and updates are updated only upon restart due to performance reasons 
+Likes and updates are updated only upon restart. 
+Will add the necessary server event when I have time.
 
 Todo:  
 1. Add loading icon (loading long articles may take time after last update)
