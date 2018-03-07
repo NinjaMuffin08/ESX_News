@@ -1,5 +1,5 @@
 # ESX_News
-# FIVEM RP NEWS BRUH
+# DO NOT DOWNLOAD. FIX COMING TONIGHT
 
 Interactive News for Fivem ESX with "facebook like" system
 ![alt text](https://i.imgur.com/cYLV7sy.jpg)  
