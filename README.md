@@ -13,7 +13,7 @@ Features:
 3. Players get their share of the social interaction in terms of money :)
 
 Todo:  
-1.-----
+1. -----  
 2. Animate menu transitions
 3. Add the missing "entertainment" section
 
