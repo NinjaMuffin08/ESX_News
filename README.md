@@ -5,7 +5,7 @@ Interactive News for Fivem ESX with "Facebook likes"
 ![alt text](https://i.imgur.com/NQzEMnE.jpg)  
 YOU NEED ESX_PROPAGANDA FOR THIS  
 Features:
-1. Simplistic UI (will update animations etc when I have time)
+1. Simplistic UI with loading icon (will update animations etc when I have time)
 2. Reporter gets paid according to likes (default 200)
 3. Players get their share of the social interaction in terms of money :)
 
