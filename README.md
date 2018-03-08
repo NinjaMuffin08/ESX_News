@@ -2,7 +2,7 @@
 # REAL FIVEM RP NEWS
 
 Interactive News for Fivem ESX with "Facebook likes"
-![alt text](https://i.imgur.com/NQzEMnE.jpg)  
+![alt text](https://i.gyazo.com/e0389a1b6e44293c118e8758b23903e2.mp4)  
 YOU NEED ESX_PROPAGANDA FOR THIS  
 Features:
 1. Simplistic UI with loading icon (will update animations etc when I have time)
