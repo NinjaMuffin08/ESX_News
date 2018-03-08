@@ -29,6 +29,5 @@ Installation:
 4. Use the export function to open. I have a button in my phone which has a news logo. You can use AIOmenu etc.
 5. En fucking joy
 
-DO NOT DISTRIBUTE WITHOUT PERMISSION.
-
+Support:
 DISCORD.ME/NAPAPIIRI
