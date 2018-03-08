@@ -2,16 +2,13 @@
 # REAL FIVEM RP NEWS
 
 Interactive News for Fivem ESX with "Facebook likes"
-![alt text](https://i.gyazo.com/e0389a1b6e44293c118e8758b23903e2.mp4)  
-YOU NEED ESX_PROPAGANDA FOR THIS  
+[![Watch the video](https://i.imgur.com/NQzEMnE.jpg)](https://i.gyazo.com/e0389a1b6e44293c118e8758b23903e2.mp4)
+YOU NEED ESX_PROPAGANDA FOR THIS
+
 Features:
-1. Simplistic UI with loading icon (will update animations etc when I have time)
+1. Simplistic UI with loading icon (will add animations etc when I have time)
 2. Reporter gets paid according to likes (default 200)
 3. Players get their share of the social interaction in terms of money :)
-
-Cons:
-Likes and updates are updated only upon restart. 
-Will add the necessary server event when I have time.
 
 Todo:  
 1.-----
