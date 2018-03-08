@@ -1,7 +1,7 @@
 # ESX_News
 # DO NOT DOWNLOAD. FIX COMING TONIGHT
 
-Interactive News for Fivem ESX with "facebook like" system
+Interactive News for Fivem ESX with "Facebook likes"
 ![alt text](https://i.imgur.com/NQzEMnE.jpg)  
 YOU NEED ESX_PROPAGANDA FOR THIS  
 Features:
