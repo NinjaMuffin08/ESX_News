@@ -1,5 +1,5 @@
 # ESX_News
-# DO NOT DOWNLOAD. FIX COMING TONIGHT
+# REAL FIVEM RP NEWS
 
 Interactive News for Fivem ESX with "Facebook likes"
 ![alt text](https://i.imgur.com/NQzEMnE.jpg)  
