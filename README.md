@@ -8,6 +8,8 @@ Click the image for video demonstration.
 
 # YOU NEED ESX_PROPAGANDA FOR THIS
 
+note: this is like the first script I ever made, so it's quite low quality
+
 Features:
 1. Simplistic UI with loading icon (will add animations etc when I have time)
 2. Reporter gets paid according to likes (default 200)
