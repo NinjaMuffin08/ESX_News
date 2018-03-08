@@ -1,5 +1,5 @@
 
-
+let lol = false;
 $(document).ready(function(){
   // Partial Functions
   function closeMain() {
@@ -55,11 +55,29 @@ $(document).ready(function(){
 	  
 	$(".news").css("display","block"); //display article
   }
+  
+  function showLoader(){
+	$(".loader").css("display", "block");
+	//$(".gtfo").fadeOut(300);
+  }
+  
+  function hideLoader(){
+	$(".loader").css("display", "none");
+	//$(".gtfo").fadeIn(300);
+  }
+  
   // Listen for NUI Events
   window.addEventListener('message', function(event){
 
 	var item = event.data;
-
+	
+	if(item.showLoader == true ) {
+		showLoader();
+	}
+	if(item.hideLoader == true ) {
+		hideLoader();
+	}
+	
     if(item.openNews == true) {
       
 	  openMain();
@@ -121,14 +139,14 @@ $(document).ready(function(){
 		ul.appendChild(li); //append to list  
     }
 	
-	
-	$(".litemn").click(function(){ //on list item click
+	$(".litemn").unbind().click(function(){ //on list item click
 		
+		showLoader();
 		openArticle($(this).attr("title"), $(this).attr("content"), $(this).attr("author"), $(this).attr("author_id"), $(this).attr("imgurl"));
 		$.post('http://esx_news/getLikes', JSON.stringify({id : $(this).attr("like_id")}));
+		hideLoader();
 		
     });
-
 
   });
   // On 'Esc' call close method
@@ -143,7 +161,7 @@ $(document).ready(function(){
 	}
   };
   
-   $(".btnClose").click(function(){
+   $(".btnClose").unbind().click(function(){
     
 	$.post('http://esx_news/closeNews', JSON.stringify({}));
 	  $("#datalistn").empty();
@@ -160,12 +178,13 @@ $(document).ready(function(){
 	
 	$(".likeBtn").click(function(){
       
-	  addLikeString($(".likeBtn").attr("likes")); //add like string to box with name
+	  addLikeString($(".likeBtn").attr("likes"));
 	  $(".likes").css("display", "block");
 	  $.post('http://esx_news/likeArticle', JSON.stringify({id : $(this).attr("like_id"), author :  $(this).attr("author_id") }));
-	  $.post('http://esx_news/getLikes', JSON.stringify({id : $(this).attr("like_id")}));
+	  //$.post('http://esx_news/getLikes', JSON.stringify({id : $(this).attr("like_id")}));
 		
     });
+	
 
 });
  

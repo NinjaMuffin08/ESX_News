@@ -1,7 +1,4 @@
 playerData			  = {} --store player here
-Likes = {}
-News = {}
-
 ESX                           = nil
 
 Citizen.CreateThread(function()
@@ -12,18 +9,9 @@ Citizen.CreateThread(function()
 	closeGui() --close on client connect
 end)
 
-RegisterNetEvent('esx:playerLoaded') --get xPlayer
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-  
+RegisterNetEvent('esx:playerLoaded') --not in use anymore but junkcode is always a plus
+AddEventHandler('esx:playerLoaded', function(xPlayer)  
   playerData = xPlayer
-  
-  ESX.TriggerServerCallback('esx_news:getLikes', function (likes)
-	Likes = likes
-  end)
-	
-   ESX.TriggerServerCallback('esx_news:getNews', function (news)
-	 News = news
-   end)
 end)
 
 AddEventHandler('onClientMapStart', function()
@@ -36,6 +24,7 @@ function openGui()
   Citizen.CreateThread(function()
 	Citizen.Wait(500)			--this is extremely important unless you want to check nuifocus on a separate function
 	SetNuiFocus(true, true)		--when opened from phone -> phone will send nuifocus(false) -> will glitch the screen if it happens before setting nui focus true. 
+	SendNUIMessage({hideLoader = true})
   end)							--was a long term glitch on huesosware editor :(
 end
 
@@ -44,6 +33,7 @@ end
 function closeGui()
   SetNuiFocus(false)
   SendNUIMessage({openNews = false})
+  SendNUIMessage({showLoader = true})
 end
 
 -- NUI Callback Methods
@@ -53,12 +43,11 @@ RegisterNUICallback('closeNews', function(data, cb)
 end)
 
 RegisterNUICallback('likeArticle', function(data, cb)
-  table.insert(Likes, {id = -1, news_id = data.id, liker_id = playerData.identifier, liker_name = "Teppo Teikäläinen"})
   TriggerServerEvent('esx_news:likeArticle', data)
   cb('ok')
 end)
 
-function getLikes(id)
+function getLikes(id, Likes)
 	local intId = tonumber(id)
 	local liketbl = {}
 	for i = 1, #Likes, 1 do
@@ -71,36 +60,33 @@ end
 
 
 RegisterNUICallback('getLikes', function(data, cb)
-  
-	local likes = getLikes(data.id)
-		local _liked = false --has player liked the article before
-		if likes ~= nil then --if likes for this news id was found
-				
-			local likestring = "" 				--string to return
-			local count = #likes
-			
-			for i = 1, count, 1 do 				--loop likes
-			    
-				if likes[i].liker_id == playerData.identifier then --if player id matches like id
-					_liked = true 				 --player has liked the article
+	cb('ok')
+	ESX.TriggerServerCallback('esx_news:getLikes', function(likes)
+		local likestring = "Sinä tykkäät tästä"
+		if likes ~= nil then 
+			local count = #likes 
+			local _liked = false
+			for i = 1, count, 1 do 				
+				if likes[i].liker_id == playerData.identifier then 
+					_liked = true 				 
 				end
 				
-				if i == 1 and i < count then  		--if it's the first and not last like
-					likestring = likes[i].liker_name 	--adds persons to string
+				if i == 1 and i < count then  		
+					likestring = likes[i].liker_name 	
 					
-				elseif i == 1 and i == count and _liked == false then	--if it's the first and last like and been liked
+				elseif i == 1 and i == count and _liked == false then	
 					likestring = 'Sinä ja ' .. likes[i].liker_name .. ' tykkäätte tästä.'						
 				
-				elseif i == 1 and i == count and _liked == true then	--if it's the first and last like and been liked
+				elseif i == 1 and i == count and _liked == true then	
 					likestring = 'Sinä tykkäsit tästä.'
-					break 	--quit and send this string.
+					break 	
 					
-				elseif i > 1 and i < count then	--if it's not the first and not the last like
+				elseif i > 1 and i < count then
 					likestring = likestring .. ', ' .. likes[i].liker_name
 				
-				elseif i > 1 and i == count	then --if it's not the first but is the last like
+				elseif i > 1 and i == count	then 
 					likestring = likestring .. ' ja ' .. likes[i].liker_name .. ' tykkäävät tästä.' 
-					break						--quit and send this string.
+					break						
 				end
 				
 			end
@@ -132,18 +118,19 @@ RegisterNUICallback('getLikes', function(data, cb)
 				
 				addLikeButton = true,
 				like_id = data.id,
-				likes = "Sinä tykkäät tästä."
+				likes = likestring
 				
 			})
-		
+			
 		end
-  cb('ok')
+	end, tonumber(data.id))
 end)
 
 --main functions
 function openNews()
+	 ESX.TriggerServerCallback('esx_news:getNews', function (News)	
 		if News ~= nil then
-
+			
 			for i = 1, #News, 1 do
 				
 				SendNUIMessage({
@@ -163,6 +150,7 @@ function openNews()
 		end
 		
 		openGui()
+	end)
 end
 
 function openremote ()

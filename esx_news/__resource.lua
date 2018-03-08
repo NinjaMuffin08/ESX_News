@@ -11,15 +11,18 @@ files {
 	'html/scripts.js',
 	'html/debounce.min.js',
 	'html/img/navbar.jpg',
-    'html/img/tabletti.png'
+    'html/img/tabletti.png',
+	'html/img/source.gif'
 }
 
 server_scripts {
 	'@mysql-async/lib/MySQL.lua',
+	'config.lua',
 	'server/main.lua'
 }
 
 client_scripts {
+	'config.lua',
 	'client/main.lua'
 }
 

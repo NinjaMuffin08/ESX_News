@@ -1,4 +1,8 @@
 <style>
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 .app {
 	display: none;
@@ -24,23 +28,25 @@
     left:0; right:0;
     top:11; bottom:0;
     margin: auto;
-
+	padding: 1px;
     /*this to solve "the content will not be cut when the window is smaller than the content": */
     height: 600px;
 	width: 500px;
-    overflow:auto;
+	overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #banner {
 	background-image: url('img/navbar.jpg');
     background-color: red;
 	height: 132px;
+	width: 100%;
 }
 
 .news {
 	
 	display: none;
-	
+	width: 100%;
 }
 
 .bait {
@@ -82,6 +88,30 @@ body {
 	 max-width:100%;
 }
 
+.loaderimg{
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+}
+
+.loader {
+
+	position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin: auto;
+	padding-top: 11px;
+	padding-left: 2px;
+
+    height: 610px;
+	width: 500px;
+    overflow: hidden;
+	z-index: 5;
+	display: hidden;
+}
+
+
+
 </style>
 
 <head>
@@ -95,22 +125,24 @@ body {
 <body>
 	<div class = "app">
 			
-			<div class = "w3-container w3-black" id = "screen">
+			<img class = "loader" src="img/source.gif"/>
+			
+			<div class = "w3-container w3-black w3-padding-1"  id = "screen">
 			
 				<div class = "w3-container" id = "banner">
 				</div>
 				
-				<div class="index w3-container w3-black">
+				<div class="index w3-container w3-black gtfo w3-padding-1">
 				  <h1>Uutiset</h1>
 				</div>
-
-				<ul class = "datalist w3-ul w3-border w3-white" id = "datalistn">
+				
+				<ul class = "datalist w3-ul w3-border w3-white gtfo w3-padding-1" id = "datalistn">
 								
 						<!-- list items here -->
 								
 				</ul>
 				
-				<div class = "news w3-container w3-white">
+				<div class = "news w3-container w3-white w3-padding-1 gtfo">
 					<!-- news here -->
 					<h1 class = "newstitle w3-black"> </h1>
 					<img class = "newsimg">
@@ -123,7 +155,7 @@ body {
 				<button class="w3-button w3-red w3-left btnClose">Sulje</button>
 				<button class="w3-button w3-black w3-left btnRet">Takaisin</button>
 				
-				<div class="w3-container w3-blue-gray">
+				<div class="w3-container w3-blue-gray w3-padding-1">
 				  <p> (c) Napapiirin Sanomat 2018</p>
 				</div>
 			</div>
