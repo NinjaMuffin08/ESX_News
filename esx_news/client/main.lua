@@ -1,8 +1,14 @@
 playerData			  = {} --store player here
 ESX                           = nil
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-closeGui() --close on client connect
+Citizen.CreateThread(function()
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(1)
+	end
+	closeGui() --close on client connect
+end)
+
 
 RegisterNetEvent('esx:playerLoaded') --not in use anymore but junkcode is always a plus
 AddEventHandler('esx:playerLoaded', function(xPlayer)  
