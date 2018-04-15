@@ -64,7 +64,7 @@ AddEventHandler('esx_news:articlePosted', function(data, id, author, identifier)
 		news_type = data.type,
 		imgurl = data.imgurl
 	})
-	table.remove(News, #News)
+	--table.remove(News, #News)
 end)
 
 RegisterServerEvent('esx_news:likeArticle')
